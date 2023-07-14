@@ -13,7 +13,9 @@ export default class NewsItem extends Component {
         return (
             <div className='m-3'>
                 <div className="card" >
-                    <span className='position-absolute badge rounded-pill bg-danger top-0 p-2 translate-middle' style={{zIndex: 1, left: "85%"}}> {source ? source : "Unknown"}</span>
+                    <div style={{position: 'absolute', right: 0}}>
+                        <span className=' badge rounded-pill bg-danger p-2' > {source ? source : "Unknown"}</span>
+                    </div>
 
                     <img src={imageUrl ? imageUrl : "https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2023%2F0708%2Fr1195390_1296x729_16%2D9.jpg"} className="card-img-top" alt="..." />
                     <div className="card-body">
@@ -21,7 +23,7 @@ export default class NewsItem extends Component {
                         </h5>
 
                         <p className="card-text">{description ? description.slice(0, 90) : ""}...</p>
-                        <p className="card-text"><small className='text-muted'>By {author ? author : "Unknown"} on {date}</small></p>
+                        <p className="card-text"><small className='text-primary'>By {author ? author : "Unknown"} on {date}</small></p>
                         <a rel="noreferrer" href={newsUrl} target='_blank' className="btn btn-sm btn-dark">Read More</a>
                     </div>
                 </div>
