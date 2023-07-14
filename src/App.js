@@ -12,8 +12,8 @@ import LoadingBar from 'react-top-loading-bar';
 
 
 const router = createBrowserRouter([
-  { path: "/", Component: Navbar },
-  { path: "/", Component: News },
+  // { path: "/", Component: Navbar },
+  // { path: "/", Component: News },
   { path: "*", Component: Root },
 ]);
 
@@ -22,13 +22,13 @@ export default function App() {
 }
 
 function Root() {
-  const pageSize = 7;
+  const pageSize = 9;
   const apiKey= process.env.REACT_APP_NEWS_API
 
   const [progress,setProgress] = useState(0)
 
-  function updateProgress(progressO){
-    setProgress(progressO)
+  function updateProgress(progressRate){
+    setProgress(progressRate)
   }
 
   return (
