@@ -16,7 +16,7 @@ const NewsItem = (props) => {
                     <span className=' badge rounded-pill bg-danger p-2' > {source ? source : "Unknown"}</span>
                 </div>
 
-                <img src={imageUrl ? imageUrl : "https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2023%2F0708%2Fr1195390_1296x729_16%2D9.jpg"} className="card-img-top" alt="..." />
+                <img src={imageUrl ? imageUrl : "https://dummyimage.com/400x400/dee2e6/6c757d.jpg"} className="card-img-top" alt="..." />
                 <div className="card-body"> 
                     <h5 className="card-title">{title ? title.slice(0, 45) : ""}...
                     </h5>
